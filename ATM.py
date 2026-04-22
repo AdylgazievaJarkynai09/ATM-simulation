@@ -36,7 +36,7 @@ def deposit(balance):
             print("Сумма должна быть больше 0")
             return balance
 
-        # 🎲 СЛУЧАЙНЫЙ БОНУС
+        
         bonus = random.randint(0, 20)
         print(f"Бонус от банка: {bonus} сом")
 
