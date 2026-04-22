@@ -1,3 +1,6 @@
+import random
+
+
 def show_menu():
     print("\n=== БАНК ===")
     print("1. Показать баланс")
@@ -28,12 +31,18 @@ def show_balance(balance):
 def deposit(balance):
     try:
         amount = float(input("Введите сумму пополнения: "))
+
         if amount <= 0:
             print("Сумма должна быть больше 0")
             return balance
 
-        balance += amount
+        # 🎲 СЛУЧАЙНЫЙ БОНУС
+        bonus = random.randint(0, 20)
+        print(f"Бонус от банка: {bonus} сом")
+
+        balance += amount + bonus
         print("Счёт успешно пополнен")
+
         return balance
 
     except ValueError:
